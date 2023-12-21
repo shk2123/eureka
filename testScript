@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Get ZooKeeper quorum
+ZK_QUORUM=$(grep 'hbase.zookeeper.quorum' /etc/hbase/conf/hbase-site.xml | sed -n 's/.*<value>\(.*\)<\/value>.*/\1/p')
+
+echo "ZooKeeper Quorum: $ZK_QUORUM"
